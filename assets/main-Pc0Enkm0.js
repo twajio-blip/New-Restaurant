@@ -20,12 +20,12 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
         </div>\r
         <div class="nav-main">\r
             <div class="logo-wrapper">\r
-                <img src="/src/image/logo.png" alt="My Logo" width="250">\r
+                <img src="src/image/logo.png" alt="My Logo" width="250">\r
             </div>\r
             <div class="hidden md:block">\r
                 <div class="nav-links">\r
-                    <a href="/" class="nav-link">Home</a>\r
-                    <a href="/menu.html" class="nav-link">Menu</a>\r
+                    <a href="index.html" class="nav-link">Home</a>\r
+                    <a href="menu.html" class="nav-link">Menu</a>\r
                     <a href="#our_chefs" class="nav-link">OUR CHEFS</a>\r
                     <a href="#about" class="nav-link">About</a>\r
                     <a href="#contact" class="nav-link">Contact</a>\r
@@ -51,8 +51,8 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
     </div>\r
     <div class="mobile-menu ">\r
         <div class="mobile-nav-links">\r
-            <a href="/" class="nav-link">Home</a>\r
-            <a href="/menu.html" class="nav-link">Menu</a>\r
+            <a href="index.html" class="nav-link">Home</a>\r
+            <a href="menu.html" class="nav-link">Menu</a>\r
             <a href="#our_chefs" class="nav-link">OUR CHEFS</a>\r
             <a href="#about" class="nav-link">About</a>\r
             <a href="#contact" class="nav-link">Contact</a>\r
@@ -62,7 +62,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
     <div class="container-custom footer-container">\r
         <div>\r
             <div class="logo-wrapper">\r
-                <img src="/src/image/logo.png" alt="My Logo" width="250">\r
+                <img src="src/image/logo.png" alt="My Logo" width="250">\r
             </div>\r
             <p>Exquisite dining experience for the modern palate.</p>\r
         </div>\r
