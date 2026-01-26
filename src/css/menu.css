@@ -1,0 +1,91 @@
+@import "./Custom/tailwind.css";
+
+/* Menu Page Header */
+.menu-page-header {
+  @apply relative h-[60vh] flex items-center justify-center 
+  overflow-hidden;
+}
+.menu-header-overlay {
+  @apply absolute inset-0 bg-black/50 z-10;
+}
+
+.menu-header-image {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.menu-header-content {
+  @apply relative z-20 text-center text-skin-primary-1;
+}
+
+.menu-header-title {
+  @apply  font-serif mb-4;
+}
+
+.menu-header-subtitle {
+  @apply text-skin-primary font-arimo;
+}
+
+/* Menu Listing Section */
+.menu-listing-section {
+  @apply bg-skin-primary-2;
+}
+
+.menu-filter{
+  @apply flex flex-wrap justify-between mb-12;
+}
+
+.menu-filter-btn {
+  @apply px-6 py-2 bg-skin-primary-1 text-sm md:text-base text-skin-secondary rounded-full 
+  hover:bg-skin-primary hover:-translate-y-2 hover:text-skin-primary-1 
+  transition-transform duration-300 cursor-pointer font-bold mb-5;
+}
+
+.menu-filter-btn-active {
+  @apply px-6 py-2 bg-skin-primary text-white font-bold rounded-full 
+  hover:bg-skin-primary/90 transition;
+}
+
+.menu-items {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 
+  justify-center items-center;
+}
+
+/* Menu Item Card */
+.menu-item-card {
+  @apply bg-skin-primary-1 rounded-2xl overflow-hidden shadow-lg 
+  hover:shadow-xl transition cursor-pointer;
+}
+
+.menu-item-image-wrapper {
+  @apply relative h-64 overflow-hidden;
+}
+
+.menu-item-image {
+  @apply w-full h-full object-cover group-hover:scale-110 transition 
+  duration-500;
+}
+
+.menu-item-price {
+  @apply text-skin-primary font-bold group-hover:text-skin-primary-1;
+}
+.menu-item-price-original {
+  @apply line-through text-skin-secondary-1;
+}
+.menu-item-content {
+  @apply p-6 group-hover:bg-skin-primary transition duration-500;
+}
+
+.menu-item-title {
+  @apply font-bold mb-2 text-skin-secondary;
+}
+
+.menu-item-desc {
+  @apply text-skin-secondary-1 group-hover:text-skin-primary-1  mb-4 
+  line-clamp-2 transition duration-500;
+}
+
+.menu-item-btn {
+  @apply w-full py-3 border-2 border-skin-primary text-skin-primary 
+  rounded-xl font-bold group-hover:bg-skin-primary-1 
+  group-hover:text-skin-secondary transition;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/menu.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Spice-Bangle</title>
+</head>
+
+<body>
+    <div id="progress">
+        <span id="progress-value">
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+    </div>
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="menu-page-header">
+        <div class="menu-header-overlay"></div>
+        <img src="/src/image/hero.avif" alt="Menu Header" class="menu-header-image">
+        <div class="menu-header-content">
+            <h1 class="menu-header-title">Our Menu</h1>
+            <p class="menu-header-subtitle">Discover our culinary masterpieces</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-listing-section">
+        <div class="container-custom">
+
+            <div class="menu-filter">
+                <button class="menu-filter-btn menu-filter-btn-active" data-category="All">All</button>
+                <button class="menu-filter-btn" data-category="Rice & Pulao">Rice & Pulao</button>
+                <button class="menu-filter-btn" data-category="Fish & Seafood">Fish & Seafood</button>
+                <button class="menu-filter-btn" data-category="Meat & Poultry">Meat & Poultry</button>
+                <button class="menu-filter-btn" data-category="Snacks & Fritters">Snacks & Fritters</button>
+                <button class="menu-filter-btn" data-category="Sweets & Desserts">Sweets & Desserts</button>
+                <button class="menu-filter-btn" data-category="Drinks">Drinks</button>
+            </div>
+            <!-- Menu Items -->
+            <div class="menu-items">
+                <!-- Items will be injected here by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/menu.js"></script>
+</body>
+
+</html>

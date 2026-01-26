@@ -1,0 +1,214 @@
+@import "./Custom/tailwind.css";
+
+/* Section Padding */
+.product-details-section {
+    @apply pt-24 pb-16 bg-skin-secondary text-skin-primary-1;
+}
+
+.product-tabs-section {
+    @apply py-12 bg-skin-secondary text-skin-primary-1 border-t 
+    border-stone-800;
+}
+
+
+/* Product Layout */
+.product-wrapper {
+    @apply flex flex-col lg:flex-row gap-12;
+}
+
+/* Product Image */
+.product-image {
+    @apply rounded-xl overflow-hidden shadow-2xl w-full h-auto 
+    object-cover;
+}
+
+/* Product Info */
+.product-info {
+    @apply flex flex-col gap-4;
+}
+
+.product-title {
+    @apply font-bold text-skin-primary-1 tracking-wide;
+}
+
+.product-short-desc {
+    @apply text-skin-secondary-1 leading-relaxed border-b 
+    border-skin-secondary-1 pb-6 mb-2;
+}
+
+.product-rating-top {
+    @apply flex items-center gap-2 text-skin-primary;
+}
+
+.review-count {
+    @apply text-skin-secondary-1;
+}
+
+.product-price-wrapper {
+    @apply flex items-center gap-4;
+}
+
+.product-price {
+    @apply text-skin-primary font-bold;
+}
+.old-price {
+    @apply text-skin-secondary-1 line-through;
+}
+
+/* Actions */
+.product-actions {
+    @apply flex flex-wrap gap-4 mt-2 pb-6 border-b border-skin-secondary-1;
+}
+
+.quantity-selector {
+    @apply flex items-center bg-white rounded overflow-hidden border 
+    border-skin-primary h-12 focus:border-skin-secondary-2;
+}
+
+.qty-btn {
+    @apply px-4 h-full text-skin-primary hover:bg-skin-primary-1 
+    transition-colors text-xl font-bold;
+}
+
+.qty-input {
+    @apply w-12 h-full bg-transparent text-center text-stone-900 
+    font-medium;
+}
+
+/* Hide spin buttons */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-to-cart-btn {
+    @apply bg-skin-primary rounded-full hover:bg-skin-primary-1 
+    transition-colors cursor-pointer;
+}
+
+.wishlist {
+    @apply mt-2;
+}
+.wishlist-btn {
+    @apply flex items-center gap-2 text-stone-400 hover:text-skin-primary
+    text-sm font-medium transition-colors;
+}
+
+/* Meta Info */
+.product-meta-info {
+    @apply flex flex-col gap-2 mt-4 text-sm uppercase font-bold 
+    tracking-wider;
+}
+.meta-item {
+     @apply flex items-center gap-2;
+}
+.meta-label {
+    @apply text-stone-200;
+}
+.meta-value {
+    @apply text-stone-500 font-normal;
+}
+
+
+/* Tabs */
+.tabs-header {
+    @apply flex gap-6 mb-8 border-b border-skin-secondary-1;
+}
+
+.tab-btn {
+    @apply pb-4 font-bold text-skin-secondary-1 uppercase tracking-wide 
+    hover:text-white transition-colors border-b-2 border-transparent 
+    relative top-[2px];
+}
+
+.tab-btn.active {
+    @apply text-skin-primary border-skin-primary;
+}
+
+.tab-content {
+    @apply hidden opacity-0 transition-opacity duration-300;
+}
+
+.tab-content.active {
+    @apply block opacity-100;
+}
+
+/* Description Content */
+.description-content {
+    @apply text-stone-400 leading-7 text-base space-y-4 max-w-4xl border 
+    p-6 border-stone-800 rounded-lg;
+}
+
+/* Reviews */
+.reviews-wrapper {
+    @apply flex flex-col gap-12;
+}
+
+.reviews-list {
+    @apply flex flex-col gap-6 border p-6 border-stone-800 rounded-lg;
+}
+
+.review-item {
+    @apply flex gap-4 border-b border-stone-800 pb-6 last:border-0 
+    last:pb-0;
+}
+
+.reviewer-avatar {
+    @apply flex-shrink-0;
+}
+
+.reviewer-avatar img {
+     @apply w-12 h-12 rounded bg-stone-800;
+}
+
+.review-content {
+    @apply flex-1;
+}
+
+.review-header {
+    @apply flex items-center gap-2 mb-2;
+}
+
+.reviewer-name {
+    @apply text-white font-bold text-base;
+}
+
+.review-date {
+    @apply text-stone-500 text-xs;
+}
+
+.review-text {
+    @apply text-stone-400 italic;
+}
+
+
+/* Review Form */
+.review-form-container {
+    @apply max-w-3xl mt-6;
+}
+
+.form-title {
+    @apply text-xl text-white font-bold mb-2 uppercase;
+}
+
+.form-note {
+    @apply text-stone-500 text-sm mb-6;
+}
+
+.form-group label {
+    @apply text-stone-300 font-medium;
+}
+
+.form-input {
+    @apply w-full bg-transparent border border-stone-700 rounded p-3 
+    text-white focus:border-skin-primary focus:outline-none focus:ring-1 
+    focus:ring-skin-primary transition-all;
+}
+
+.form-rating-stars {
+    @apply text-xl space-x-1;
+}
+.form-rating-stars i.active-star {
+    @apply font-bold;
+}

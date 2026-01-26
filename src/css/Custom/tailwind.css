@@ -1,0 +1,414 @@
+/* ---------------------------------------------------
+   Imports
+--------------------------------------------------- */
+@import "tailwindcss";
+
+/* ---------------------------------------------------
+   Tailwind Custom Theme
+--------------------------------------------------- */
+@theme {
+  /* -------------------------
+     Colors
+  ------------------------- */ 
+  --color-skin-primary: #FB8C00;   
+  --color-skin-primary-1: #ffffff;            
+  --color-skin-primary-2: #fef2f2;    
+  --color-skin-secondary: #090909ff;   
+  --color-skin-accent: #a38b5f;         
+  --color-skin-accent-dark: #685126;   
+  --color-skin-secondary-1: #6c838bff;   
+  --color-skin-secondary-2: #03cc65;  
+  --color-skin-secondary-3: #ffffff;
+  --color-skin-neutral: oklch(0.9761 0 0);                /* #f7f7f7 */
+  --color-skin-background: oklch(1 0 0);                  /* #ffffff */
+
+  /* -------------------------
+     Fonts
+  ------------------------- */
+  --font-sans: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-poppins: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-quicksand: "Quicksand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-arimo: "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+
+  /* Breakpoints */
+  --breakpoint-xs: 425px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px; 
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* -------------------------
+     Spacing
+  ------------------------- */
+  --spacing-section-t-desktop: 4rem;
+  --spacing-section-t-tab: 3rem;
+  --spacing-section-t-mobile: 2rem;
+
+  --spacing-section-x-desktop: 20px;
+  --spacing-section-x-tab: 20px;
+  --spacing-section-x-mobile: 20px;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+  --spacing-huge: 2rem;
+
+  /* -------------------------
+     Text Sizes
+  ------------------------- */
+  --text-size-heading: 32px;
+  --text-size-sub-heading: 18px;
+  --text-size-badge: 22px;
+
+
+  /* -------------------------
+     Animations
+  ------------------------- */
+
+  --animate-shrink-grow: shrink-grow 2s infinite ease-in-out;
+  @keyframes shrink-grow {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+}
+
+  --animate-scroll-vertical: scroll-vertical 10s linear infinite;
+  @keyframes scroll-vertical {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -20%;
+  }
+}
+
+  /* Ken Burns Scale Down */
+  --animate-ken-burns-scale-down: ken-burns-scale-down 8s ease-in-out;
+  @keyframes ken-burns-scale-down {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+  /* Scale Pulse */
+  --animate-scale-pulse: scale-pulse 2s ease-in-out infinite;
+  @keyframes scale-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+  }
+
+  /* Ken Burns Scale Up */
+  --animate-ken-burns-scale-up: ken-burns-scale-up 8s ease-in-out forwards;
+  @keyframes ken-burns-scale-up {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Product Ken Burns */
+  --animate-product-ken-burns-scale-up: product-ken-burns-scale-up 3s
+    ease-in-out forwards;
+  @keyframes product-ken-burns-scale-up {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Rotate */
+  --animate-rotate: rotate 12s linear infinite;
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Roll */
+  --animate-roll: roll 1.5s ease-in-out infinite;
+  @keyframes roll {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(10px) rotate(10deg);
+    }
+    50% {
+      transform: translateX(-10px) rotate(-10deg);
+    }
+    75% {
+      transform: translateX(10px) rotate(10deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+
+  /* Fade Slide */
+  --animate-fadeSlide: fadeSlide 1s cubic-bezier(0.5, 1, 0.7, 1) forwards;
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Width Slide */
+  --animate-widthSlide: widthSlide 1s cubic-bezier(0.5, 1, 0.7, 1) forwards;
+  @keyframes widthSlide {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* Left Slide */
+  --animate-leftSlide: leftSlide 0.7s cubic-bezier(0.5, 1, 0.7, 1) forwards;
+  @keyframes leftSlide {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Slide In Out */
+  --animate-slide-in-out: slide-in-out 700ms forwards ease-out;
+  @keyframes slide-in-out {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Slide Up */
+  --animate-slide-up: slide-up 700ms forwards ease-out;
+  @keyframes slide-up {
+    0% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  /* Slide Scale */
+  --animate-slide-scale: slide-scale 700ms forwards ease-out;
+  @keyframes slide-scale {
+    0% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Slide Rotate */
+  --animate-slide-rotate: slide-rotate 700ms forwards ease-out;
+  @keyframes slide-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+
+  /* Letter flip in */
+  --animate-letter-flip-in: letter-flip-in 0.6s forwards ease-out;
+  @keyframes letter-flip-in {
+    from {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  /* Letter flip out */
+  --animate-letter-flip-out: letter-flip-out 0.4s forwards ease-in;
+  @keyframes letter-flip-out {
+    from {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+  }
+
+  /* billboard */
+  --animate-shutters: shutters 2s ease-in-out reverse;
+  @keyframes shutters {
+    0% {
+      clip-path: polygon(
+        0% 0%,
+        10% 0%,
+        10% 100%,
+        10% 100%,
+        10% 0%,
+        20% 0%,
+        20% 100%,
+        20% 100%,
+        20% 0%,
+        30% 0%,
+        30% 100%,
+        30% 100%,
+        30% 0%,
+        40% 0%,
+        40% 100%,
+        40% 100%,
+        40% 0%,
+        50% 0%,
+        50% 100%,
+        50% 100%,
+        50% 0%,
+        60% 0%,
+        60% 100%,
+        60% 100%,
+        60% 0%,
+        70% 0%,
+        70% 100%,
+        70% 100%,
+        70% 0%,
+        80% 0%,
+        80% 100%,
+        80% 100%,
+        80% 0%,
+        90% 0%,
+        90% 100%,
+        90% 100%,
+        90% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%
+      );
+    }
+    100% {
+      clip-path: polygon(
+        10% 0%,
+        10% 0%,
+        10% 100%,
+        20% 100%,
+        20% 0%,
+        20% 0%,
+        20% 100%,
+        30% 100%,
+        30% 0%,
+        30% 0%,
+        30% 100%,
+        40% 100%,
+        40% 0%,
+        40% 0%,
+        40% 100%,
+        50% 100%,
+        50% 0%,
+        50% 0%,
+        50% 100%,
+        60% 100%,
+        60% 0%,
+        60% 0%,
+        60% 100%,
+        70% 100%,
+        70% 0%,
+        70% 0%,
+        70% 100%,
+        80% 100%,
+        80% 0%,
+        80% 0%,
+        80% 100%,
+        90% 100%,
+        90% 0%,
+        90% 0%,
+        90% 100%,
+        100% 100%,
+        100% 0%,
+        100% 0%,
+        100% 100%,
+        10% 100%
+      );
+    }
+  }
+
+  /* Blink */
+  --animate-blink: blink 1s ease-in-out infinite;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+  /* Float only */
+  --animate-float: float-only 3s ease-in-out infinite;
+  @keyframes float-only {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5%); }
+  }
+
+  /* Rotate Clockwise */
+  --animate-rotate-cw: rotate-cw 3s ease-in-out infinite;
+  @keyframes rotate-cw {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  /* Rotate Counter-Clockwise */
+  --animate-rotate-ccw: rotate-ccw 3s ease-in-out infinite;
+  @keyframes rotate-ccw {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-5deg); }
+  }
+
+  /* Drink Combo */
+  --animate-drink-combo: float-rotate-drink 3s ease-in-out infinite;
+  @keyframes float-rotate-drink {
+    0%, 100% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-5%) rotate(10deg); }
+  }
+}   
+
+@import "./general.css";
+ 

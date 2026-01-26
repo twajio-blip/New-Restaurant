@@ -1,0 +1,454 @@
+@import "./Custom/tailwind.css";
+
+
+ /* Hero */
+.hero-section {
+  @apply flex flex-col relative  items-center 
+  justify-center overflow-hidden;
+}
+.hero-bg{
+  @apply absolute inset-0 -z-10;
+}
+.hero-overlay {
+  @apply absolute inset-0 bg-linear-to-r from-stone-900/80
+  to-stone-900/60 z-10;
+}
+.hero-image {
+  @apply w-full h-full object-cover -z-10;
+}
+.hero-title {
+  @apply text-skin-secondary-3 font-bold mb-6 my-5 xs:mt-15 
+  tracking-tight text-center;
+}
+.hero-highlight {
+  @apply text-skin-primary ;
+}
+.hero-text {
+  @apply mt-4 mx-auto text-skin-secondary-3 mb-8 text-center;
+}
+.hero-swiper .swiper-wrapper img{
+  @apply w-full h-[300px] md:h-[400px] object-cover;
+}
+
+/* Hero Footer Info */
+.hero-footer {
+  @apply mt-5  max-w-5xl flex flex-col md:flex-row 
+  items-center justify-between text-skin-secondary-3 
+  z-30 w-[90%] md:w-full mx-auto left-0 right-0 gap-4 md:gap-0;
+}
+.hero-footer-box {
+  @apply text-center backdrop-blur-sm bg-skin-secondary/20 p-3 
+  md:p-4 rounded-lg w-full max-w-[300px];
+}
+.hero-footer-title {
+  @apply font-bold text-skin-primary uppercase tracking-widest 
+  mb-1;
+}
+
+/* Hero Booking */
+.hero-booking {
+  @apply absolute right-0 -translate-y-1/2 rotate-270 
+  origin-right mr-8 z-30 hidden md:block;
+  animation: scroll-vertical 10s linear infinite;
+}
+.hero-booking-text {
+  @apply text-skin-secondary-3 text-size-sub-heading font-bold 
+  tracking-widest uppercase;
+}
+  
+
+
+.hero-swiper {
+  @apply w-full h-[300px] md:h-[400px] max-w-3xl mx-auto 
+  bg-red-500 rounded-3xl md:rounded-[500px] border-4 
+  border-solid border-black overflow-hidden shadow-2xl;
+}
+  
+.hero-swiper .swiper-slide img {
+  @apply  w-full h-full  transition-transform duration-[2000ms] 
+  ease-out;
+}
+
+.hero-swiper .swiper-slide-active img {
+  @apply scale-110;
+}
+  
+.hero-swiper .swiper-slide {
+  @apply flex items-center justify-center bg-skin-secondary;
+}
+
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+  @apply !hidden  sm:!flex w-10 h-10 bg-skin-secondary/50 
+  rounded-full items-center justify-center hover:bg-skin-primary 
+  hover:text-skin-secondary-3 transition-all duration-300 
+  shadow-lg p-2;
+  --swiper-navigation-size: 40px;
+  --swiper-navigation-color: #f97316;
+}
+
+
+/* Menu Section */
+.menu-section {
+  @apply bg-skin-primary-2;
+}
+.menu-header {
+  @apply text-center mb-15;
+}
+.menu-subtitle {
+  @apply text-skin-primary font-bold tracking-wide 
+  uppercase;
+}
+.menu-title {
+  @apply mt-2 font-bold text-skin-secondary;
+}
+
+/* Menu Swiper Navigation & Pagination */
+.menu-swiper .swiper-button-prev,
+.menu-swiper .swiper-button-next {
+  @apply !hidden  sm:!flex w-10 h-10 bg-skin-primary-1/70 
+  rounded-full p-2 items-center justify-center text-skin-primary 
+  hover:bg-skin-primary hover:text-skin-secondary-3 
+  transition-all duration-300 shadow-md;
+}
+.menu-swiper .swiper-button-prev {
+  left: 20px !important;
+}
+.menu-swiper .swiper-button-next {
+  right: 20px !important;
+}
+
+.menu-swiper .swiper-pagination-bullet-active {
+  @apply bg-skin-primary ;
+}
+
+.menu-swiper .swiper-pagination {
+  bottom: 0px !important;
+}
+
+.menu-swiper .swiper-slide {
+@apply p-[10px];
+}
+
+.card-container {
+  @apply bg-skin-primary-1 rounded-2xl overflow-hidden
+  shadow-sm hover:shadow-xl transform hover:scale-105
+  transition-all duration-300 mb-5 hover:bg-skin-primary
+  hover:text-skin-secondary-3 cursor-pointer;
+}
+
+.card-container:hover .card-title,
+.card-container:hover .card-desc {
+  @apply text-skin-secondary-3;
+}
+
+.card-image-wrapper {
+  @apply w-full h-64 overflow-hidden;
+}
+.card-image {
+  @apply w-full h-full object-cover;
+}
+.card-content {
+  @apply p-8 text-center;
+}
+.card-header {
+  @apply flex justify-center items-baseline mb-4;
+}
+.card-title {
+  @apply lg:text-size-badge font-bold text-skin-primary;
+}
+
+.card-desc {
+  @apply text-skin-secondary mb-4;
+}
+
+
+/* Special Offers Section */
+.offer-section{
+  @apply  bg-skin-primary-1 relative z-30;
+}
+
+.offer-bg-desktop {
+  @apply hidden lg:block absolute inset-y-0 right-0 w-1/2 ;
+}
+.offer-bg-image{
+  @apply w-full h-full object-cover;
+}
+.offer-container{
+  @apply flex flex-col lg:flex-row relative z-10 !pb-0 lg:!pb-20;
+}
+.offer-col-left{
+  @apply w-full lg:w-1/2 flex items-center;
+}
+.offer-content-wrapper{
+  @apply w-full px-4 sm:px-6 lg:px-8 lg:pr-16;
+}
+
+.offer-header {
+  @apply text-center lg:text-left mb-10;
+}
+.offer-subtitle {
+  @apply text-skin-primary font-bold tracking-wide 
+  uppercase ;
+}
+.offer-title {
+  @apply mt-2 font-bold text-skin-secondary;
+}
+.offer-cards-list {
+  @apply flex flex-col gap-6 max-w-[480px] mb-10 lg:mb-0 mx-auto 
+  lg:mx-0;
+}
+.offer-content {
+  @apply px-4 flex flex-row items-center gap-4 border h-20
+  border-stone-900/10 rounded-2xl shadow-md transition-all 
+  duration-300 hover:scale-[1.02] hover:shadow-lg w-full 
+  overflow-hidden cursor-pointer;
+}
+.offer-logo {
+  @apply w-24 font-black uppercase leading-tight tracking-tighter 
+  border-r border-stone-900/10 pr-6 text-center;
+}
+.text-white .offer-logo {
+  @apply border-white/20;
+}
+.offer-desc {
+  @apply font-medium;
+}
+.offer-col-right{
+  @apply w-auto lg:w-1/2 relative min-h-[350px] sm:min-h-[450px] 
+  lg:min-h-0 -mx-4 sm:-mx-6 lg:mx-0 ;
+}
+.offer-bg-mobile{
+  @apply lg:hidden absolute inset-0 w-full h-full object-cover ;
+}
+.offer-floating-wrapper{
+  @apply absolute top-[5%] left-0 lg:-left-32 z-20 flex flex-col 
+  items-center w-full lg:w-auto translate-x-0 sm:-translate-x-10 
+  lg:translate-x-0 ;
+}
+.offer-anim-logo-container{
+  @apply relative z-30 w-48 lg:w-96 mb-[-20px] lg:mb-[-40px];
+}
+
+.offer-anim-logo-1{
+  @apply w-full drop-shadow-2xl translate-x-2 lg:translate-x-5 
+  animate-rotate-ccw;
+}
+.offer-anim-logo-2-wrapper{
+  @apply absolute inset-0 translate-x-56 lg:translate-x-96 flex 
+  items-center;
+}
+.offer-anim-logo-2{
+  @apply w-32 lg:w-64 drop-shadow-2xl animate-scale-pulse 
+  translate-y-8 lg:translate-y-16;
+}
+.offer-anim-food-container{
+  @apply relative flex items-center justify-center;
+}
+.offer-anim-food{
+  @apply w-60 h-60 sm:w-96 sm:h-96 lg:w-[750px] lg:h-[750px] 
+  object-contain drop-shadow-2xl animate-rotate-cw origin-center;
+}
+
+.offer-anim-drink{
+  @apply absolute -right-48 lg:-right-96 bottom-0 sm:bottom-20 
+  lg:bottom-40 w-48 h-48 lg:w-[450px] lg:h-[450px] object-contain 
+  drop-shadow-2xl animate-drink-combo z-10;
+}
+
+/* Delivery Section */
+.delivery-section {
+  @apply bg-skin-primary-2 overflow-hidden;
+}
+
+.delivery-layout {
+  @apply flex flex-col lg:flex-row items-center gap-16;
+}
+
+.delivery-col-image {
+  @apply lg:w-1/2 w-full;
+}
+
+.delivery-img-wrapper {
+  @apply relative;
+}
+
+.delivery-img-bg {
+  @apply absolute -inset-4 bg-skin-primary/10 rounded-[4rem] 
+  transform -rotate-3;
+}
+
+.delivery-main-img {
+  @apply relative z-10 rounded-[3rem] shadow-2xl object-cover w-full 
+  h-[500px];
+}
+
+.delivery-floating-card {
+  @apply absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl 
+  shadow-xl z-20;
+}
+
+.delivery-floating-content {
+  @apply flex items-center gap-4;
+}
+
+.delivery-icon-box {
+  @apply w-12 h-12 bg-green-100 rounded-full flex items-center 
+  justify-center text-green-600;
+}
+
+.delivery-col-content {
+  @apply lg:w-1/2 w-full;
+}
+
+.delivery-text {
+  @apply text-stone-600 mb-10 leading-relaxed;
+}
+
+.delivery-features-list {
+  @apply space-y-8;
+}
+
+.delivery-feature-item {
+  @apply flex items-start gap-6;
+}
+
+.delivery-feature-icon {
+  @apply w-14 h-14 bg-white rounded-2xl shadow-md flex items-center 
+  justify-center text-skin-primary shrink-0 transition-transform 
+  hover:scale-110;
+}
+
+.delivery-feature-title {
+  @apply lg:text-size-badge font-bold text-stone-900 mb-1;
+}
+
+.delivery-feature-desc {
+  @apply text-stone-500;
+}
+
+.delivery-btn {
+  @apply mt-12 px-10 py-4 hover:bg-skin-primary hover:text-white 
+  text-skin-primary;
+}
+
+/* About Section */
+.about-section {
+  @apply bg-skin-secondary text-skin-secondary-3 overflow-hidden;
+}
+.about-layout {
+  @apply flex flex-col md:flex-row items-center gap-16;
+}
+.about-image-wrapper {
+  @apply relative rounded-3xl overflow-hidden shadow-2xl;
+}
+.about-image {
+  @apply w-full h-full object-cover transform 
+  transition-transform duration-700 hover:scale-110;
+}
+.about-section-title {
+  @apply mt-2 lg:text-size-badge font-bold text-skin-secondary-3;
+}
+.about-text {
+  @apply text-skin-secondary-3 mb-6 leading-relaxed;
+}
+.stats-container {
+  @apply flex flex-wrap gap-8 mt-10;
+}
+.stat-block {
+  @apply flex flex-col;
+}
+.stat-number {
+  @apply text-4xl font-bold text-skin-primary mb-1 tabular-nums;
+}
+.stat-label {
+  @apply text-sm text-skin-secondary-1 uppercase tracking-widest;
+}
+.stat-divider {
+  @apply hidden md:block w-px bg-white/10 h-12;
+}
+
+.reservation-section{
+  @apply bg-skin-primary-2 overflow-hidden;
+}
+
+/* Reservation Section */
+.reservation-layout{
+  @apply flex flex-col lg:flex-row gap-16 items-start;
+}
+.reservation-header{
+  @apply text-center mb-16;
+}
+.reservation-contact-wrapper{
+  @apply lg:w-1/3 w-full;
+}
+.reservation-contact-card{
+  @apply bg-skin-secondary text-white p-10 rounded-3xl shadow-xl;
+}
+.contct-title{
+  @apply text-2xl font-bold mb-6 text-skin-primary;
+}
+.contact-details{
+  @apply space-y-6;
+}
+.contact-info{
+  @apply flex items-start gap-4;
+  i{
+    @apply mt-1 text-skin-primary;
+  }
+}
+.contact-text{
+  h5{
+    @apply font-bold;
+  }
+  p{
+    @apply text-skin-secondary-1;
+  }
+}
+.reservation-hours{
+  @apply mt-10 pt-10 border-t border-white/10;
+  h5{
+    @apply font-bold mb-4;
+  }
+}
+.reservation-hours-wrapper{
+  @apply flex flex-col text-skin-secondary-1;
+  h5{
+    @apply flex justify-between;
+  }
+}
+.reservation-form-wrapper{
+  @apply lg:w-2/3 w-full;
+}
+.reservation-form{
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-10 rounded-3xl shadow-lg;
+}
+
+.form{
+  label{
+    @apply text-sm font-bold text-skin-secondary uppercase tracking-wider;
+  }
+  
+}
+
+.reservation-input {
+  @apply w-full px-5 py-3 bg-stone-50 border border-stone-200 
+  rounded-xl focus:outline-none focus:ring-2 
+  focus:ring-skin-primary focus:border-transparent transition-all 
+  duration-300;
+}
+textarea.reservation-input {
+  @apply resize-none;
+}
+select.reservation-input {
+  @apply appearance-none bg-no-repeat 
+  bg-position-[right_1rem_center] bg-size-[1em];
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FB8C00'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* Randomized Offer Animations */
+.offer-anim-logo-1 { animation-duration: 4s; animation-delay: -0.5s; }
+.offer-anim-logo-2 { animation-duration: 3.5s; animation-delay: -1.2s; }
+.offer-anim-food { animation-duration: 5.5s; animation-delay: -2.7s; }
+.offer-anim-drink { animation-duration: 4.8s; animation-delay: -4.1s; }
+

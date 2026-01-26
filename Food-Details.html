@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/details.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+</head>
+
+<body>
+    <div id="progress">
+        <span id="progress-value">
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+    </div>
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container-custom">
+            <div class="product-wrapper">
+                <!-- Product Image -->
+                <div class="product-image group">
+                    <img src="/src/image/Rice&polao.jpg" alt="Chicken Biryani" class="product-image" />
+                </div>
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h3 class="product-title">Chicken Biryani</h3>
+
+                    <p class="product-short-desc">
+                        Aromatic basmati rice cooked with succulent chicken and exotic spices. A classic favorite.
+                    </p>
+                    <!-- Rating Top -->
+                    <div class="product-rating-top">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="review-count">(3 customer reviews)</span>
+                    </div>
+                    <div class="product-price-wrapper">
+                        <h4 class="old-price">350TK</h4>
+                        <h3 class="product-price">280TK</h3>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="btn-primary add-to-cart-btn"><i class="fas fa-shopping-basket mr-2"></i> Add to
+                            Cart</button>
+                    </div>
+
+                    <div class="wishlist">
+                        <a href="#" class="wishlist-btn"><i class="far fa-heart"></i> Add to wishlist</a>
+                    </div>
+
+                    <div class="product-meta-info">
+                        <div class="meta-item">
+                            <span class="meta-label">Availability:</span>
+                            <span class="meta-value text-green-500">In Stock</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Categories:</span>
+                            <span class="meta-value">Rice, Pulao, Lunch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="product-tabs-section">
+        <div class="container-custom">
+            <!-- Tab Buttons -->
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="reviews">Reviews (3)</button>
+            </div>
+
+            <!-- Tab Content: Description -->
+            <div id="description" class="tab-content active">
+                <div class="description-content">
+                    <p>Experience the authentic taste of our Chicken Biryani, a masterpiece of culinary art.
+                        Aromatic basmati rice is slow-cooked with succulent pieces of chicken, infused with a secret
+                        blend of exotic spices, saffron, and fresh herbs.
+                        Each bite delivers a burst of flavor that perfectly balances heat and fragrance.
+                        Served with a side of fresh salad and tangy raita to complete your meal.</p>
+                    <p>Our Biryani is prepared using the traditional "Dum" method to seal in the aromas and flavors.</p>
+                </div>
+            </div>
+
+            <!-- Tab Content: Reviews -->
+            <div id="reviews" class="tab-content">
+                <div class="reviews-wrapper">
+                    <div class="reviews-list">
+                        <!-- Review 1 -->
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://ui-avatars.com/api/?name=Rahim+Uddin&background=random" alt="User">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <h4 class="reviewer-name">Rahim Uddin</h4>
+                                    <span class="review-date">March 16, 2024</span>
+                                    <div class="rating-stars text-xs ml-auto">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">"Absolutely delicious! The chicken was tender and the rice was
+                                    perfectly cooked. Best Biryani in town!"</p>
+                            </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://ui-avatars.com/api/?name=Farhana&background=random" alt="User">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <h4 class="reviewer-name">Farhana</h4>
+                                    <span class="review-date">March 18, 2024</span>
+                                    <div class="rating-stars text-xs ml-auto">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">"Great flavor and portion size."</p>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://ui-avatars.com/api/?name=Tanvir&background=random" alt="User">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <h4 class="reviewer-name">Tanvir</h4>
+                                    <span class="review-date">March 20, 2024</span>
+                                    <div class="rating-stars text-xs ml-auto">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">"The spices are just right, not too spicy but very flavorful.
+                                    Will order again!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Form -->
+                    <div class="review-form-container">
+                        <h3 class="form-title">Add a Review</h3>
+                        <p class="form-note">Your email address will not be published. Required fields are marked *</p>
+
+                        <form id="add-review-form" class="review-form">
+                            <div class="form-group mb-4">
+                                <label class="block text-sm mb-2">Rate this item</label>
+                                <div class="form-rating-stars cursor-pointer text-yellow-500">
+                                    <i class="far fa-star active-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="review-text">Write your review *</label>
+                                <textarea id="review-text" rows="4" class="form-input" required></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div class="form-group">
+                                    <label for="reviewer-name">Name *</label>
+                                    <input type="text" id="reviewer-name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reviewer-email">Email *</label>
+                                    <input type="email" id="reviewer-email" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-6 flex items-center gap-2">
+                                <input type="checkbox" id="save-info" class="rounded bg-transparent border-stone-600">
+                                <label for="save-info" class="text-xs text-stone-400">Save my name, email, and website
+                                    in this browser for the next time I comment.</label>
+                            </div>
+
+                            <button type="submit" class="btn-primary py-3 px-8 text-sm">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/js/details.js"></script>
+</body>
+
+</html>
