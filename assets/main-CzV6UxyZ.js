@@ -71,7 +71,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
             <h3 class="footer-heading">Contact</h3>\r
             <ul class="footer-list">\r
                 <li>123 Khilgaon, Dhaka</li>\r
-                <li>+88 0191393585</li>\r
+                <li>+88 01913935850</li>\r
                 <li>reservations@spicebangle.com</li>\r
             </ul>\r
         </div>\r
