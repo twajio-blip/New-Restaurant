@@ -27,7 +27,7 @@ if (menuContainer) {
             card.setAttribute('data-aos-delay', (index % 3) * 100);
 
             card.addEventListener('click', () => {
-                window.location.href = `food-details.html`;
+                window.location.href = `food-details.html?id=${item.id}`;
             });
 
             // --- PRICE LOGIC ---

@@ -65,7 +65,7 @@
 }
   
 .hero-swiper .swiper-slide img {
-  @apply  w-full h-full  transition-transform duration-[2000ms] 
+  @apply  w-full h-full  transition-transform duration-2000 
   ease-out;
 }
 
@@ -79,7 +79,7 @@
 
 .hero-swiper .swiper-button-prev,
 .hero-swiper .swiper-button-next {
-  @apply !hidden  sm:!flex w-10 h-10 bg-skin-secondary/50 
+  @apply hidden!  sm:flex! w-10 h-10 bg-skin-secondary/50 
   rounded-full items-center justify-center hover:bg-skin-primary 
   hover:text-skin-secondary-3 transition-all duration-300 
   shadow-lg p-2;
@@ -106,7 +106,7 @@
 /* Menu Swiper Navigation & Pagination */
 .menu-swiper .swiper-button-prev,
 .menu-swiper .swiper-button-next {
-  @apply !hidden  sm:!flex w-10 h-10 bg-skin-primary-1/70 
+  @apply hidden!  sm:flex! w-10 h-10 bg-skin-primary-1/70 
   rounded-full p-2 items-center justify-center text-skin-primary 
   hover:bg-skin-primary hover:text-skin-secondary-3 
   transition-all duration-300 shadow-md;
@@ -175,7 +175,7 @@
   @apply w-full h-full object-cover;
 }
 .offer-container{
-  @apply flex flex-col lg:flex-row relative z-10 !pb-0 lg:!pb-20;
+  @apply flex flex-col lg:flex-row relative z-10 pb-0! lg:pb-20!;
 }
 .offer-col-left{
   @apply w-full lg:w-1/2 flex items-center;

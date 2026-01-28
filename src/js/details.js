@@ -1,3 +1,63 @@
+import { menuData } from './menuData.js';
+
+// --- Dynamic Rendering Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Get ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const idParam = params.get('id');
+
+    if (idParam) {
+        const item = menuData.find(i => i.id == idParam);
+
+        if (item) {
+            // 1. Image
+            const imgEl = document.querySelector('.product-image img');
+            if (imgEl) {
+                imgEl.src = item.image;
+                imgEl.alt = item.name;
+            }
+
+            // 2. Title
+            const titleEl = document.querySelector('.product-title');
+            if (titleEl) titleEl.textContent = item.name;
+
+            // 3. Description (Short)
+            const shortDescEl = document.querySelector('.product-short-desc');
+            if (shortDescEl) shortDescEl.textContent = item.desc;
+
+            // 4. Description (Tab)
+            const tabDescEl = document.querySelector('#description .description-content p');
+            if (tabDescEl) {
+                tabDescEl.textContent = `Experience the authentic taste of our ${item.name}.
+                 ${item.desc} Prepared with fresh ingredients and traditional spices.`;
+            }
+
+            // 5. Category
+            const categoryEl = document.querySelector('.product-meta-info .meta-item:nth-child(2) .meta-value');
+            if (categoryEl) categoryEl.textContent = item.category;
+
+            // 6. Price
+            const priceWrapper = document.querySelector('.product-price-wrapper');
+            if (priceWrapper) {
+                const originalPrice = item.price;
+                const offerPercent = item.offer ? parseInt(item.offer) : 0;
+
+                if (offerPercent > 0) {
+                    const discountedPrice = Math.round(originalPrice - (originalPrice * offerPercent) / 100);
+                    priceWrapper.innerHTML = `
+               <h4 class="old-price">${originalPrice}TK</h4>
+               <h3 class="product-price">${discountedPrice}TK</h3>
+            `;
+                } else {
+                    priceWrapper.innerHTML = `
+               <h3 class="product-price">${originalPrice}TK</h3>
+            `;
+                }
+            }
+        }
+    }
+});
+
 // Tab Switching Logic
 document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');

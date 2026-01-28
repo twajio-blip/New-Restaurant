@@ -101,7 +101,9 @@ html, body {
     }
   }
 
-  .mobile-menu {
+
+}
+.mobile-menu {
     @apply fixed top-0 left-0 h-screen w-64 text-skin-primary-1 
     z-50 bg-black/95 px-10 py-10 -translate-x-full 
     transition-transform duration-300 ease-in-out shadow-xl;
@@ -118,7 +120,6 @@ html, body {
       @apply translate-x-0;
     }
   }
-}
     .logo-wrapper {
       @apply flex items-center w-36;
     }
@@ -154,6 +155,6 @@ html, body {
 }
 
 .footer-bottom {
-  @apply pt-8 border-t border-stone-900 text-center 
+  @apply py-5 border-t border-stone-900 text-center 
   text-size-badge;
 }
