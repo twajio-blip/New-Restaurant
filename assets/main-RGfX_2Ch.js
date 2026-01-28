@@ -20,7 +20,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
         </div>\r
         <div class="nav-main">\r
             <div class="logo-wrapper">\r
-                <img src="src/image/logo.png" alt="My Logo" width="250">\r
+                <img src="logo.png" alt="My Logo" width="250">\r
             </div>\r
             <div class="hidden md:block">\r
                 <div class="nav-links">\r
