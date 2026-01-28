@@ -63,7 +63,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
     <div class="container-custom footer-container">\r
         <div>\r
             <div class="logo-wrapper">\r
-                <img src="src/image/logo.png" alt="My Logo" width="250">\r
+                <img src="logo.png" alt="My Logo" width="250">\r
             </div>\r
             <p>Exquisite dining experience for the modern palate.</p>\r
         </div>\r
@@ -71,7 +71,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
             <h3 class="footer-heading">Contact</h3>\r
             <ul class="footer-list">\r
                 <li>123 Khilgaon, Dhaka</li>\r
-                <li>+88 01913935850</li>\r
+                <li>+88 0191393585</li>\r
                 <li>reservations@spicebangle.com</li>\r
             </ul>\r
         </div>\r
